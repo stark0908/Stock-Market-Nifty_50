@@ -590,8 +590,8 @@ Let’s visualize the predictions against the actual prices:
 # Plotting (Code from notebook)  
 plt.figure(figsize=(15, 8))  
 plt.plot(y_test_actual, label=’Actual Close Price’, alpha=0.7)  
-# plt.plot(rnn_y_pred, label=’RNN Predicted Close Price’, alpha=0.7) # Optional: Can uncomment to show all  
-# plt.plot(lstm_y_pred, label=’LSTM Predicted Close Price’, alpha=0.7) # Optional  
+plt.plot(rnn_y_pred, label=’RNN Predicted Close Price’, alpha=0.7) # Optional: Can uncomment to show all  
+plt.plot(lstm_y_pred, label=’LSTM Predicted Close Price’, alpha=0.7) # Optional  
 plt.plot(gru_y_pred, label=’GRU Predicted Close Price’, alpha=0.9, color=’red’) # Highlight GRU  
 plt.title(‘GRU vs Actual Stock Price Prediction’)  
 plt.xlabel(‘Time (Test Set Index)’)  
@@ -599,10 +599,13 @@ plt.ylabel(‘Nifty 50 Close Price’)
 plt.legend()  
 plt.show()  
 ```
-
+![RNN vs Actual Plot](DCS_final_files/DCS_final_175_0.png)
+![LSTM vs Actual Plot](DCS_final_files/DCS_final_177_0.png)
 ![GRU vs Actual Plot](DCS_final_files/DCS_final_179_0.png)
 
 The GRU predictions (red line) track the general trend of the actual price (blue line) much better than the other models (visible in the combined plot from the notebook, `DCS_final_181_0.png`). It still misses sharp peaks and troughs, which is expected given the noise and complexity, but it captures the overall movement more effectively.
+
+![All Models vs Actual Plot](DCS_final_files/DCS_final_181_0.png)
 
 ## Reflections and How We Can Improve
 

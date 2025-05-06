@@ -18,10 +18,7 @@ df=pd.read_csv(‘./dataset_minute.csv’)
 df.head()  
 ```
 
-<div>  
-<style scoped>  
-/* CSS styles omitted for brevity in blog post */  
-</style>  
+<div>   
 <table border=”1" class=”dataframe”>  
 <thead>  
 <tr style=”text-align: right;”>  

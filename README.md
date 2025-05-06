@@ -307,17 +307,17 @@ An accuracy of around 51%… that’s barely better than flipping a coin! Adding
 
 ```python  
 # — — GridSearchCV (Code from notebook) — -  
-# patam_grid={ … } # Parameter grid defined  
-# from sklearn.model_selection import GridSearchCV  
-# dt=DecisionTreeClassifier(random_state=42)  
-# grid_search=GridSearchCV(estimator=dt,param_grid=patam_grid,cv=3, scoring=’accuracy’,n_jobs=-1,verbose=1) # Using cv=3 for speed  
-# grid_search.fit(X_train_all, Y_train_all) # Using all features train set  
-# print(“Best Parameters:”, grid_search.best_params_)  
-# print(“Best Score (on CV):”, grid_search.best_score_)  
-# best_dt = grid_search.best_estimator_  
-# Y_predict_best = best_dt.predict(X_test_all)  
-# print(“\nClassification Report (Best DT from GridSearchCV):”)  
-# print(classification_report(Y_test_all, Y_predict_best))  
+ patam_grid={ … } # Parameter grid defined  
+ from sklearn.model_selection import GridSearchCV  
+ dt=DecisionTreeClassifier(random_state=42)  
+ grid_search=GridSearchCV(estimator=dt,param_grid=patam_grid,cv=3, scoring=’accuracy’,n_jobs=-1,verbose=1) # Using cv=3 for speed  
+ grid_search.fit(X_train_all, Y_train_all) # Using all features train set  
+ print(“Best Parameters:”, grid_search.best_params_)  
+ print(“Best Score (on CV):”, grid_search.best_score_)  
+ best_dt = grid_search.best_estimator_  
+ Y_predict_best = best_dt.predict(X_test_all)  
+ print(“\nClassification Report (Best DT from GridSearchCV):”)  
+ print(classification_report(Y_test_all, Y_predict_best))  
 ```  
 *(GridSearchCV results showed similar ~51% accuracy)*
 
